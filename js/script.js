@@ -18,6 +18,7 @@ console.log('JS OK');
 // BONUS 2:
 // -Organizzare i singoli membri in card / schede e rendere la pagina gradevole(potete usare lo screen in alleg
 
+// Creo array con i membri del team 
 
 const team = [
     {
@@ -51,3 +52,41 @@ const team = [
         image: 'barbara-ramos-graphic-designer.jpg',
     },
 ];
+
+// Creo un ciclo  per gli oggetti
+for (let i = 0; i < team.length; i++) {
+
+    // Assegno l'oggetto (teamMember)
+    let teamMember = team[i]; 
+
+    const col = document.getElementsByClassName('col-4');
+
+    // Creo il div per le img
+    const imgContainer = document.createElement('div');
+    imgContainer.setAttribute('id', 'imgContainer');
+
+    // Inserisco l'mmagine all'interno delle colonne
+    col[i].appendChild(imgContainer);
+
+    // Creo il div per le descrizioni
+    const descritionsContainer = document.createElement('div');
+
+    // Assegno l'id al div appena creato
+    descritionsContainer.setAttribute('id', 'descritionsContainer');
+    col[i].appendChild(descritionsContainer);
+
+
+
+
+    // Creo un ciclo per assegnare le img del teamMember
+    const img = teamMember['image'];
+    console.log(img);
+
+    // Assegno proprietà e creo l'img
+    const name = teamMember['name'];
+    const role = teamMember['role'];
+
+    const picture = document.createElement('img');
+    
+
+}    
