@@ -87,6 +87,19 @@ for (let i = 0; i < team.length; i++) {
     const role = teamMember['role'];
 
     const picture = document.createElement('img');
-    
+    picture.src = `./img/${img}`;
+    console.log(picture);
+    // Inserisco l'immagine nell'HTML
+    imgContainer.appendChild(picture);
+
+    // Creo il tag per i nomi del teamMember
+    let h5 = document.createElement('h5');
+    h5.innerText = `${name}`;
+    descritionsContainer.appendChild(h5);
+
+    // Creo il tag per i role del teamMember
+    let span = document.createElement('span');
+    span.innerText = `${role}`;
+    descritionsContainer.appendChild(span);
 
 }    
