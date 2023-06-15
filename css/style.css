@@ -21,4 +21,7 @@ span {
     font-weight: 300;
 }
 
-
+#descritionsContainer {
+    padding: 10px;
+    background-color: lightgray;
+}
